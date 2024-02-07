@@ -3,22 +3,21 @@ import '../widgets/chord_list_widget.dart'; // Import your ChordListWidget
 
 class MainScreen extends StatelessWidget {
   final String title;
-  MainScreen({super.key, required this.title})
+  const MainScreen({super.key, required this.title});
 
   @override
+    @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    const title = 'Chords';
+
+    return MaterialApp(
+      title: title,
+      home: Scaffold(
         appBar: AppBar(
-        title: const Text("Chords"),
-      ),
-      body: SingleChildScrollView(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: [
-            // Use ChordListWidget to display the list of chords
-            ChordListWidget(),
-          ],
+          title: const Text('Chords'),
+          backgroundColor: Colors.blueAccent,
         ),
+        body: ChordListWidget()
       ),
     );
   }

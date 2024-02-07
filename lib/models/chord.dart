@@ -1,16 +1,8 @@
-import 'package:flutter/material.dart';
-
-class Chord extends StatelessWidget{
+class Chord {
   final String title;
+  final String imagePath;
 
-
-  const Chord({this.title = "Default", super.key});
+  const Chord({required this.title, required this.imagePath});
   
-  @override
-  Widget build(BuildContext context) {
-    // TODO: implement build
-    throw UnimplementedError();
-  }
-
 
 }

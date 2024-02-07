@@ -4,7 +4,8 @@ import 'package:flutter/material.dart';
 import '../models/chord.dart';
 
 class ChordDetailScreen extends StatelessWidget {
-  final Chord chord; // Assuming Chord is a data model for your chord information
+  final Chord
+      chord; // Assuming Chord is a data model for your chord information
 
   const ChordDetailScreen({required this.chord, super.key});
 
@@ -19,7 +20,9 @@ class ChordDetailScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text('How to play ${chord.title} on the piano:'),
-            // Additional details or instructions for the chord
+            Image(
+              image: AssetImage(chord.imagePath),
+            )
           ],
         ),
       ),

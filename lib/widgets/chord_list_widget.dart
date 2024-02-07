@@ -5,18 +5,15 @@ import '../screens/chord_detail_screen.dart';
 import 'package:flutter/material.dart';
 
 class ChordListWidget extends StatelessWidget {
+  final List<Chord> chords = [const Chord(title: "C", imagePath: "assets/c_major.jpg")];
 
-  final List<Chord> chords = [Chord(title: "C")];
-
-  ChordListWidget({Key? key}) : super(key: key);
+  ChordListWidget({super.key});
   @override
   Widget build(BuildContext context) {
-    // Sample chord data (replace it with your actual data)
-     // Example chord names
 
     return ListView.builder(
       itemCount: chords.length,
-      itemBuilder: (context, index) {
+      itemBuilder: (BuildContext context, int index) {
         // Return a GestureDetector for each chord item
         return GestureDetector(
           onTap: () {
@@ -29,6 +26,7 @@ class ChordListWidget extends StatelessWidget {
             );
           },
           child: ListTile(
+            leading: const Icon(Icons.music_note),
             title: Text(chords[index].title), // Display chord name
           ),
         );
