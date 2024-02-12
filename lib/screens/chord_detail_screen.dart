@@ -1,7 +1,7 @@
 // chord_detail_screen.dart
 
 import 'package:flutter/material.dart';
-import '../models/chord.dart';
+import '../models/chords.dart';
 
 class ChordDetailScreen extends StatelessWidget {
   final Chord
