@@ -9,6 +9,9 @@ class ChordListScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text(root),
+      ),
       body: ChordListWidget(rootNote: root)
     );
   }

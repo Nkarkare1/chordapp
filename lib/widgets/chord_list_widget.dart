@@ -32,7 +32,7 @@ class ChordListWidget extends StatelessWidget {
           },
           child: ListTile(
             leading: const Icon(Icons.music_note),
-            title: Text(chordsByRoot[rootNote]![index].title), // Display chord name
+            title: Text("" + rootNote + " " + chordsByRoot[rootNote]![index].quality[0].toUpperCase() + chordsByRoot[rootNote]![index].quality.substring(1)), // Display chord name
           ),
         );
       },

@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import '../models/chords.dart';
+import '../models/keyboard.dart';
 
 class ChordDetailScreen extends StatelessWidget {
   final Chord
@@ -12,19 +13,26 @@ class ChordDetailScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.orange,
       appBar: AppBar(
-        title: Text(chord.title),
+        title: Text("" + chord.rootNote + " " + chord.quality[0].toUpperCase() + chord.quality.substring(1)),
       ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text('How to play ${chord.title} on the piano:'),
-            Image(
-              image: AssetImage(chord.imagePath),
-            )
-          ],
-        ),
+      body: Column(
+        children: <Widget>[
+          Expanded(
+            flex: 2, // takes up 2/3 of screen in column
+            child: Container(
+              color: Colors.blue,
+              child: Center(
+                child: Text('Top 2/3 of the screen'),
+              ),
+            ),
+          ),
+          Expanded(
+            flex: 1,
+            child: Keyboard(isInteractive: false, rootNoteForChord: chord.rootNote, chordQuality: "major",)
+          ),
+        ],
       ),
     );
   }

@@ -1,6 +1,5 @@
 import 'package:chord_dictionary/widgets/root_name_button_widget.dart';
 import 'package:flutter/material.dart';
-import '../widgets/chord_list_widget.dart'; // Import your ChordListWidget
 
 class MainScreen extends StatelessWidget {
   final String title;
@@ -17,7 +16,8 @@ class MainScreen extends StatelessWidget {
           children: [
             Row(
               children: [
-                RootNameButton(root: 'C')
+                RootNameButton(root: 'C'),
+                RootNameButton(root: 'D')
               ]),
           ],
         ),

@@ -1,4 +1,4 @@
-import 'package:chord_dictionary/screens/chord_detail_screen.dart';
+
 import 'package:chord_dictionary/screens/chord_list_screen.dart';
 import 'package:flutter/material.dart';
 
